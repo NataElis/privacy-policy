@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +7,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <title>Noia – Goals & Vision Boards</title>
-
-    
-    <!-- Google tag (gtag.js) -->
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ELG0J9G7W"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -38,8 +35,6 @@ src="https://www.facebook.com/tr?id=941787285348988&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
     
 </script>
-
-    
 
 <style>
 body{
@@ -203,6 +198,161 @@ h1{
     color:#4b4b52;
 }
 
+.instagram-section{
+    max-width:900px;
+    margin:52px auto 42px;
+    text-align:left;
+}
+
+.instagram-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:20px;
+}
+
+.instagram-kicker{
+    font-size:13px;
+    line-height:1.2;
+    font-weight:700;
+    color:#5d4bb7;
+    margin-bottom:8px;
+}
+
+.instagram-title{
+    margin:0;
+    font-size:28px;
+    line-height:1.14;
+    font-weight:700;
+    letter-spacing:-0.6px;
+    color:#1c1c1e;
+}
+
+.instagram-subtitle{
+    max-width:660px;
+    margin:10px 0 0;
+    font-size:17px;
+    line-height:1.62;
+    color:#4b4b52;
+    font-weight:500;
+    letter-spacing:-0.15px;
+}
+
+.instagram-follow{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:0 18px;
+    border-radius:999px;
+    background:#1E192F;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:700;
+    box-shadow:0 10px 24px rgba(30,25,47,0.16);
+}
+
+.instagram-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+}
+
+.instagram-card{
+    overflow:hidden;
+    border-radius:24px;
+    background:rgba(255,255,255,0.78);
+    border:1px solid rgba(255,255,255,0.82);
+    box-shadow:0 14px 34px rgba(45,40,70,0.08);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
+
+.instagram-card-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 13px;
+}
+
+.instagram-avatar{
+    width:32px;
+    height:32px;
+    border-radius:9px;
+    box-shadow:0 6px 14px rgba(93,75,183,0.14);
+}
+
+.instagram-name{
+    font-size:14px;
+    font-weight:700;
+    color:#1c1c1e;
+}
+
+.instagram-date{
+    margin-top:1px;
+    font-size:12px;
+    color:#8e8e93;
+}
+
+.instagram-media{
+    position:relative;
+    aspect-ratio:4 / 5;
+    background:#f1eff7;
+    overflow:hidden;
+}
+
+.instagram-media img,
+.instagram-media video{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.instagram-media video{
+    background:#1E192F;
+}
+
+.instagram-video-badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    padding:5px 8px;
+    border-radius:999px;
+    color:#ffffff;
+    background:rgba(30,25,47,0.74);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.2px;
+}
+
+.instagram-card-body{
+    padding:12px 13px 14px;
+}
+
+.instagram-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+    color:#1E192F;
+    font-size:18px;
+}
+
+.instagram-caption{
+    margin:0;
+    font-size:14px;
+    line-height:1.5;
+    color:#4b4b52;
+}
+
+.instagram-caption strong{
+    color:#1c1c1e;
+}
+
 .appstore-wrap{
     display:flex;
     justify-content:center;
@@ -339,6 +489,19 @@ h1{
         grid-template-columns:1fr;
     }
 
+    .instagram-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .instagram-grid{
+        grid-template-columns:1fr;
+    }
+
+    .instagram-title{
+        font-size:26px;
+    }
+
     .circle{
         width:380px;
         height:380px;
@@ -410,7 +573,7 @@ h1{
     </div>
 
     <div class="description">
-        A <span class="highlight">calm space for your goals,</span> with visual boards, gentle reminders, and low-pressure progress tracking — helping you reconnect with the life you want to build.
+        A <span class="highlight">goal tracker app</span> that combines visual goal tracking, moodboards, and reminders in one calm space.
     </div>
 
     <div class="appstore-wrap">
@@ -456,6 +619,72 @@ h1{
         Download on the App Store
     </a>
     -->
+
+    <section class="instagram-section" aria-labelledby="instagram-title">
+        <div class="instagram-header">
+            <div>
+                <div class="instagram-kicker">Instagram</div>
+                <h2 class="instagram-title" id="instagram-title">Follow Noia on Instagram</h2>
+                <p class="instagram-subtitle">Thoughts on modern goal setting, focus, gentle motivation, and psychology insights.</p>
+            </div>
+
+            <a class="instagram-follow" href="https://www.instagram.com/noiagoals/" rel="noopener">Follow @noiagoals</a>
+        </div>
+
+        <div class="instagram-grid">
+            <article class="instagram-card">
+                <div class="instagram-card-top">
+                    <img class="instagram-avatar" src="noia-icon.png" alt="">
+                    <div>
+                        <div class="instagram-name">noiagoals</div>
+                        <div class="instagram-date">Recent post</div>
+                    </div>
+                </div>
+                <div class="instagram-media">
+                    <video src="instagram-may20.mp4" autoplay muted loop playsinline></video>
+                    <div class="instagram-video-badge">Video</div>
+                </div>
+                <div class="instagram-card-body">
+                    <div class="instagram-actions" aria-hidden="true">♡ ◇ ↗</div>
+                    <p class="instagram-caption"><strong>noiagoals</strong> A quiet reminder to keep your future visible.</p>
+                </div>
+            </article>
+
+            <article class="instagram-card">
+                <div class="instagram-card-top">
+                    <img class="instagram-avatar" src="noia-icon.png" alt="">
+                    <div>
+                        <div class="instagram-name">noiagoals</div>
+                        <div class="instagram-date">Recent post</div>
+                    </div>
+                </div>
+                <div class="instagram-media">
+                    <img src="instagram-may19.jpg" alt="Noia Instagram quote post">
+                </div>
+                <div class="instagram-card-body">
+                    <div class="instagram-actions" aria-hidden="true">♡ ◇ ↗</div>
+                    <p class="instagram-caption"><strong>noiagoals</strong> Where attention goes, energy follows.</p>
+                </div>
+            </article>
+
+            <article class="instagram-card">
+                <div class="instagram-card-top">
+                    <img class="instagram-avatar" src="noia-icon.png" alt="">
+                    <div>
+                        <div class="instagram-name">noiagoals</div>
+                        <div class="instagram-date">Recent post</div>
+                    </div>
+                </div>
+                <div class="instagram-media">
+                    <img src="instagram-research.jpg" alt="Noia Instagram research post">
+                </div>
+                <div class="instagram-card-body">
+                    <div class="instagram-actions" aria-hidden="true">♡ ◇ ↗</div>
+                    <p class="instagram-caption"><strong>noiagoals</strong> What stays visible has a better chance to stay meaningful.</p>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <div class="footer">
         <div class="footer-links">
