@@ -150,6 +150,40 @@ a{color:inherit;}
     padding:22px 20px 38px;
 }
 
+.topline{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:18px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.brand-icon{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    box-shadow:0 10px 26px rgba(141,115,200,0.18);
+}
+
+.brand-name{
+    font-size:24px;
+    line-height:1;
+    font-weight:700;
+    letter-spacing:-0.5px;
+}
+
+.tag{
+    color:var(--muted);
+    font-size:15px;
+    font-weight:600;
+}
+
 .hero-card{
     display:grid;
     grid-template-columns:0.92fr 1.08fr;
@@ -190,7 +224,9 @@ h1{
     font-weight:400;
 }
 
-.cta-row{margin-top:28px;}
+.cta-row{
+    margin-top:28px;
+}
 
 .download-btn{
     position:relative;
@@ -281,7 +317,9 @@ h1{
     box-shadow:0 10px 24px rgba(152,131,210,0.24);
 }
 
-.benefit.is-active .benefit-icon{opacity:1;}
+.benefit.is-active .benefit-icon{
+    opacity:1;
+}
 
 .phone-stage{
     position:relative;
@@ -343,11 +381,258 @@ h1{
     pointer-events:auto;
 }
 
-.slide.image-slide img{
+.slide.image-slide img,
+.slide.image-slide video{
     width:100%;
     height:100%;
     display:block;
     object-fit:cover;
+}
+
+.board-screen,
+.mock-screen{
+    height:100%;
+    padding:62px 20px 20px;
+    background:linear-gradient(180deg,#FEFBFF 0%,#F7F0FF 100%);
+}
+
+.board-title{
+    margin-bottom:16px;
+    font-size:28px;
+    line-height:1.05;
+    letter-spacing:-0.04em;
+    font-weight:700;
+}
+
+.board-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.board-card{
+    min-height:138px;
+    border-radius:26px;
+    padding:14px;
+    display:flex;
+    align-items:flex-end;
+    color:#fff;
+    font-size:17px;
+    line-height:1.16;
+    font-weight:700;
+    letter-spacing:-0.02em;
+}
+
+.board-card.a{background:linear-gradient(135deg,#9274D3,#DCCBFF);}
+.board-card.b{background:linear-gradient(135deg,#5DA04F,#C4F179);}
+.board-card.c{background:linear-gradient(135deg,#1E192F,#7C6C99);}
+.board-card.d{background:linear-gradient(135deg,#F0A46E,#F7D5BB);}
+
+.widget-stack{
+    display:grid;
+    gap:13px;
+    margin-top:18px;
+}
+
+.widget-card{
+    min-height:112px;
+    padding:18px;
+    border-radius:26px;
+    background:rgba(255,255,255,0.84);
+    box-shadow:0 12px 30px rgba(30,25,47,0.07);
+}
+
+.widget-small{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+}
+
+.widget-label{
+    color:#8D73C8;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+}
+
+.widget-title{
+    margin-top:8px;
+    color:var(--ink);
+    font-size:22px;
+    line-height:1.1;
+    font-weight:700;
+    letter-spacing:-0.04em;
+}
+
+.widget-ring{
+    flex:0 0 auto;
+    width:66px;
+    height:66px;
+    border-radius:50%;
+    border:10px solid #EAF8D5;
+    border-right-color:#65A84E;
+    display:grid;
+    place-items:center;
+    color:#65A84E;
+    font-weight:700;
+}
+
+.widget-large{
+    min-height:184px;
+    background:
+        radial-gradient(circle at top right, rgba(196,241,121,0.40), transparent 45%),
+        linear-gradient(135deg,#FFFFFF,#F4ECFF);
+}
+
+.widget-tasks{
+    margin-top:14px;
+    display:grid;
+    gap:8px;
+}
+
+.widget-task{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:9px 10px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.72);
+    color:#625B6F;
+    font-size:13px;
+    font-weight:600;
+}
+
+.reminder-list{
+    margin-top:16px;
+    padding:14px;
+    border-radius:24px;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(30,25,47,0.06);
+}
+
+.reminder-list strong{
+    display:block;
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.reminder{
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0;
+    color:#625B6F;
+    font-size:14px;
+    border-top:1px solid rgba(30,25,47,0.07);
+}
+
+.mock-date{
+    display:flex;
+    justify-content:space-between;
+    color:#9B83EF;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+}
+
+.mock-title{
+    margin:22px 0 16px;
+    font-family:var(--font-editorial);
+    color:var(--ink);
+    font-size:28px;
+    font-style:italic;
+    font-weight:430;
+    line-height:1.1;
+}
+
+.focus-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+    margin-bottom:22px;
+}
+
+.focus-card{
+    min-height:106px;
+    border-radius:22px;
+    padding:12px;
+    display:flex;
+    align-items:flex-end;
+    color:#fff;
+    font-size:14px;
+    line-height:1.16;
+    font-weight:700;
+    box-shadow:0 12px 24px rgba(30,25,47,0.08);
+}
+
+.focus-card.one{background:linear-gradient(135deg,#4B7E4A,#B7E87B);}
+.focus-card.two{background:linear-gradient(135deg,#8D73C8,#DBC5FF);}
+.focus-card.three{background:linear-gradient(135deg,#0287B9,#58CBE7);}
+
+.mock-section-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:0 0 14px;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:-0.04em;
+}
+
+.filter{
+    width:46px;
+    height:46px;
+    border-radius:999px;
+    display:grid;
+    place-items:center;
+    background:#fff;
+    box-shadow:0 8px 20px rgba(30,25,47,0.08);
+}
+
+.goal-item{
+    display:grid;
+    grid-template-columns:48px 1fr auto;
+    align-items:center;
+    gap:10px;
+    min-height:76px;
+    margin-bottom:10px;
+    padding:12px;
+    border-radius:22px;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(30,25,47,0.06);
+}
+
+.ring{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:7px solid #EAF8D5;
+    border-right-color:#66A94C;
+    display:grid;
+    place-items:center;
+    font-size:17px;
+}
+
+.goal-name{
+    color:#49434F;
+    font-size:19px;
+    line-height:1.15;
+    font-weight:600;
+    letter-spacing:-0.02em;
+}
+
+.goal-cat{
+    margin-top:3px;
+    color:#8E8992;
+    font-size:13px;
+}
+
+.goal-state{
+    color:#8D73C8;
+    font-size:13px;
+    font-weight:700;
 }
 
 .slide-dots{
@@ -366,7 +651,9 @@ h1{
     background:rgba(30,25,47,0.22);
 }
 
-.slide-dot.is-active{background:#8D73C8;}
+.slide-dot.is-active{
+    background:#8D73C8;
+}
 
 .why-noia,
 .instagram,
@@ -396,7 +683,9 @@ h1{
     box-shadow:0 16px 44px rgba(30,25,47,0.055);
 }
 
-.why-content{text-align:left;}
+.why-content{
+    text-align:left;
+}
 
 .why-art{
     position:relative;
@@ -427,6 +716,7 @@ h1{
     font-weight:420;
     letter-spacing:0.005em;
     text-align:center;
+    text-transform:none;
 }
 
 .why-title{
@@ -549,9 +839,13 @@ h1{
         border-radius:12px;
     }
 
-    .app-ribbon-title{font-size:16px;}
+    .app-ribbon-title{
+        font-size:16px;
+    }
 
     .hero{padding:16px 14px 30px;}
+    .topline{margin-bottom:14px;}
+    .tag{display:none;}
 
     .hero-card{
         display:flex;
@@ -637,19 +931,24 @@ h1{
         padding:24px 20px;
     }
 
-    .why-content{width:100%;}
+    .why-content{
+        width:100%;
+    }
 
     .why-art{
         width:132px;
         height:132px;
     }
 
-    .why-title{font-size:28px;}
+    .why-title{
+        font-size:28px;
+    }
 }
 
 @media (max-width: 420px){
     h1{font-size:39px;}
     .hero-copy{font-size:18px;}
+    .brand-name{font-size:21px;}
 }
 
 @media (prefers-reduced-motion: reduce){
@@ -694,7 +993,6 @@ h1{
                         </svg>
                         <span>Your Goals</span>
                     </button>
-
                     <button class="benefit" type="button" data-slide="1">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <rect x="4" y="5" width="16" height="14" rx="3" stroke="currentColor" stroke-width="2"></rect>
@@ -703,7 +1001,6 @@ h1{
                         </svg>
                         <span>Vision Boards &amp; Notes</span>
                     </button>
-
                     <button class="benefit" type="button" data-slide="2">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <rect x="4" y="4" width="6.5" height="6.5" rx="2" stroke="currentColor" stroke-width="2"></rect>
@@ -713,7 +1010,6 @@ h1{
                         </svg>
                         <span>Home Widget</span>
                     </button>
-
                     <button class="benefit" type="button" data-slide="3">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <rect x="4" y="5.5" width="16" height="14.5" rx="3" stroke="currentColor" stroke-width="2"></rect>
@@ -722,7 +1018,6 @@ h1{
                         </svg>
                         <span>Reminders</span>
                     </button>
-
                     <button class="benefit" type="button" data-slide="4">
                         <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M9 3h6M12 3v3M12 21a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
@@ -757,7 +1052,6 @@ h1{
                         </div>
                     </div>
                 </div>
-
                 <div class="slide-dots" aria-hidden="true">
                     <span class="slide-dot is-active"></span>
                     <span class="slide-dot"></span>
@@ -774,7 +1068,6 @@ h1{
             <div class="why-art" aria-hidden="true">
                 <img src="noia-team-story.png" alt="">
             </div>
-
             <div class="why-content">
                 <p class="why-kicker">A little story behind Noia</p>
                 <h2 class="why-title" id="why-noia-title">Made with vision. Built with heart.</h2>
@@ -782,6 +1075,7 @@ h1{
                 <p class="story-paragraph">Noia is a woman-owned app, designed and built from scratch by a small team with care, curiosity, and a lot of heart.</p>
                 <p class="story-emphasis">✨ Your first three goals are free.</p>
                 <p class="story-paragraph">Explore, experiment, and make them yours. If you’d like to create more goals, you can unlock unlimited goals with an annual subscription — and help us keep building and improving Noia along the way.</p>
+
             </div>
         </div>
     </section>
@@ -829,6 +1123,16 @@ function setSlide(index){
     slideDots.forEach((dot, dotIndex) => {
         dot.classList.toggle('is-active', dotIndex === index);
     });
+    slidePanels.forEach((panel, panelIndex) => {
+        const video = panel.querySelector('video');
+        if (!video) return;
+        if (panelIndex === index) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        } else {
+            video.pause();
+        }
+    });
 }
 
 function startSlider(){
@@ -849,4 +1153,3 @@ startSlider();
 </script>
 </body>
 </html>
-```
