@@ -52,6 +52,8 @@ body{
     align-items:center;
     gap:11px;
     min-width:0;
+    flex:1 1 auto;
+    overflow:hidden;
     color:var(--ink);
     text-decoration:none;
 }
@@ -61,8 +63,13 @@ body{
     border-radius:12px;
     box-shadow:0 8px 20px rgba(141,115,200,0.14);
 }
-.brand-copy{min-width:0;}
+.brand-copy{
+    min-width:0;
+    flex:1 1 auto;
+    overflow:hidden;
+}
 .brand-title{
+    display:block;
     font-size:16px;
     line-height:1.05;
     font-weight:700;
@@ -164,10 +171,12 @@ h1{
     border-top:1px solid rgba(30,25,47,0.10);
     color:#756c83;
     font-size:15px;
+    text-align:center;
 }
 .footer-links{
     display:flex;
     flex-wrap:wrap;
+    justify-content:center;
     gap:14px 22px;
     margin-bottom:14px;
 }
