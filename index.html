@@ -970,7 +970,7 @@ h1{
                 <div class="app-ribbon-subtitle">Your goals, always visible</div>
             </div>
         </div>
-        <a class="app-ribbon-button" href="https://apps.apple.com/us/app/noia-goals-vision-boards/id6742675690" rel="noopener">Download Now</a>
+        <a class="app-ribbon-button" href="https://apps.apple.com/us/app/noia-goals-vision-boards/id6742675690" data-ga-event="external_click" data-button-id="download_top" rel="noopener">Download Now</a>
     </div>
 
     <section class="hero">
@@ -980,7 +980,7 @@ h1{
                 <p class="hero-copy">Visualize your goals, keep them close, and make progress at your own pace.</p>
 
                 <div class="cta-row">
-                    <a class="download-btn" href="https://apps.apple.com/us/app/noia-goals-vision-boards/id6742675690" rel="noopener">
+                    <a class="download-btn" href="https://apps.apple.com/us/app/noia-goals-vision-boards/id6742675690" data-ga-event="external_click" data-button-id="download_hero" rel="noopener">
                         <span class="apple" aria-hidden="true"></span>
                         <span>Get Noia free</span>
                         <span class="chevron" aria-hidden="true"></span>
@@ -1083,7 +1083,7 @@ h1{
 
     <section class="instagram" aria-label="Follow Noia on Instagram">
         <div class="instagram-panel">
-            <a class="instagram-follow" href="https://www.instagram.com/noiagoals/" rel="noopener">
+            <a class="instagram-follow" href="https://www.instagram.com/noiagoals/" data-ga-event="instagram_click" data-button-id="instagram_follow" rel="noopener">
                 <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
                     <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle>
@@ -1107,6 +1107,38 @@ h1{
 </main>
 
 <script>
+document.querySelectorAll('a[data-ga-event][data-button-id]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+        if (event.defaultPrevented || typeof window.gtag !== 'function') return;
+
+        const parameters = {
+            send_to: 'G-8ELG0J9G7W',
+            button_id: link.dataset.buttonId,
+            link_url: link.href
+        };
+
+        // Give analytics time to process before leaving this tab.
+        // Modified clicks retain the browser's normal new-tab behavior.
+        if (event.button === 0 && !event.metaKey && !event.ctrlKey &&
+            !event.shiftKey && !event.altKey &&
+            (!link.target || link.target === '_self')) {
+            event.preventDefault();
+            let navigated = false;
+            const navigate = () => {
+                if (navigated) return;
+                navigated = true;
+                window.location.assign(link.href);
+            };
+            // Keep the link working even when analytics is blocked or unavailable.
+            window.setTimeout(navigate, 800);
+            parameters.event_callback = navigate;
+            parameters.event_timeout = 700;
+        }
+
+        window.gtag('event', link.dataset.gaEvent, parameters);
+    });
+});
+
 const slideButtons = Array.from(document.querySelectorAll('[data-slide]'));
 const slidePanels = Array.from(document.querySelectorAll('[data-slide-panel]'));
 const slideDots = Array.from(document.querySelectorAll('.slide-dot'));
